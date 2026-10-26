@@ -1,0 +1,137 @@
+{
+  "brand": "PlumbingSource",
+  "titleSuffix": "Plumbing fittings & sourcing knowledge",
+  "description": "Independent plumbing fittings reference library, comparison checklists and supplier due diligence guidance for international buyers.",
+  "eyebrow": "Plumbing & piping procurement",
+  "hero": "Make every fitting specification count.",
+  "intro": "Understand valves, connectors and pipe fittings before you compare suppliers. Clear product references, practical checks and sourcing knowledge in one place.",
+  "heroCardTitle": "The right fitting starts with the right questions.",
+  "heroCardCopy": "Material, thread profile, working conditions and local compliance requirements matter more than a matching photo.",
+  "topics": [
+    {
+      "title": "Threads & connections",
+      "summary": "BSP, NPT, compression, press and push-fit systems are not universally interchangeable."
+    },
+    {
+      "title": "Material selection",
+      "summary": "Brass, copper, stainless steel and polymers require application-specific material checks."
+    },
+    {
+      "title": "Pressure, temperature & media",
+      "summary": "Working conditions and approvals influence whether a valve or fitting is suitable."
+    }
+  ],
+  "products": [
+    {
+      "name": "Brass threaded elbow",
+      "category": "Fittings",
+      "description": "A direction-changing connector used in threaded pipework assemblies.",
+      "spec": "Nominal size, male/female threads, thread type, material designation.",
+      "tags": [
+        "Brass",
+        "Elbow",
+        "Threaded"
+      ],
+      "caution": "Check BSP/NPT thread compatibility and applicable drinking-water rules."
+    },
+    {
+      "name": "Compression coupling",
+      "category": "Fittings",
+      "description": "A mechanical connector often selected for compatible copper or plastic tubing.",
+      "spec": "Tube outside diameter, ferrule design, pipe compatibility, pressure rating.",
+      "tags": [
+        "Compression",
+        "Coupling"
+      ],
+      "caution": "Installation procedures and permitted tubing vary by system."
+    },
+    {
+      "name": "Ball valve",
+      "category": "Valves",
+      "description": "Quarter-turn isolation valve frequently used in fluid distribution systems.",
+      "spec": "Bore size, body/seat material, valve rating, end connections.",
+      "tags": [
+        "Isolation",
+        "Quarter-turn"
+      ],
+      "caution": "Valve ratings must match temperature, pressure and service medium."
+    },
+    {
+      "name": "Check valve",
+      "category": "Valves",
+      "description": "One-way valve intended to reduce reverse flow in compatible systems.",
+      "spec": "Cracking pressure, orientation, connection, materials, test standard.",
+      "tags": [
+        "Non-return",
+        "Flow"
+      ],
+      "caution": "Not a substitute for a legally required backflow prevention assembly."
+    },
+    {
+      "name": "Stainless steel tee",
+      "category": "Fittings",
+      "description": "Three-way branch connector for piping installations.",
+      "spec": "Grade, branch sizing, schedule/wall thickness, joining method.",
+      "tags": [
+        "Stainless steel",
+        "Tee"
+      ],
+      "caution": "Confirm exact grade and test documents with the manufacturer."
+    },
+    {
+      "name": "Pressure reducing valve",
+      "category": "Valves",
+      "description": "Regulating valve used where downstream pressure must be controlled.",
+      "spec": "Inlet range, adjustable outlet range, flow capacity, certifications.",
+      "tags": [
+        "Regulation",
+        "PRV"
+      ],
+      "caution": "Selection and installation should be checked by a qualified professional."
+    }
+  ],
+  "guides": [
+    {
+      "title": "BSP vs NPT: what to check",
+      "summary": "Nominally similar threaded fittings can differ in profile and sealing approach.",
+      "checks": [
+        "Confirm the exact thread standard and size on drawings.",
+        "Ask for dimensions or gauges—not a product photo alone.",
+        "Specify sealing method, fluid type and local code requirements."
+      ]
+    },
+    {
+      "title": "How to write a clearer RFQ",
+      "summary": "Incomplete specifications cause wrong quotations and costly substitutions.",
+      "checks": [
+        "List quantity, drawing and end-use conditions.",
+        "State test reports, material certificates and packaging requirements.",
+        "Ask for sample policy, lead time, trade terms and exclusions."
+      ]
+    },
+    {
+      "title": "Checking a valve quotation",
+      "summary": "Price comparisons only matter when the technical basis matches.",
+      "checks": [
+        "Confirm material grades and genuine test documents.",
+        "Compare pressure/temperature envelopes and product standards.",
+        "Clarify inspection scope, spare parts and warranty terms."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does this site sell fittings?",
+      "answer": "No. This is an educational reference prototype; there is no checkout or live supplier quotation service."
+    },
+    {
+      "question": "Can two similar-looking fittings use the same threads?",
+      "answer": "Not necessarily. Thread geometry and applicable sealing methods can differ. Confirm by standard and drawing rather than appearance."
+    },
+    {
+      "question": "Are the manufacturers verified?",
+      "answer": "No manufacturer profiles have been published. Future listings will distinguish public records, supplier declarations and independently reviewed documents."
+    }
+  ],
+  "disclosure": "Technical notes are general education, not engineering approval, purchase advice or proof of product compliance."
+}
