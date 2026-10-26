@@ -18,9 +18,12 @@ node scripts/build.mjs --config ..\plumbing-source\site.json --out ..\plumbing-s
 ```
 The generated `public/` files are committed in this standalone repository. No runtime dependence on PENG Nexus.
 
-## Cloudflare Pages (manual setup after review)
+## Cloudflare Workers Static Assets (preview first)
 - Repository: `auturock067-spec/plumbing-source`
-- Production branch: `main`
-- Framework: None, build command: blank
-- Output directory: `public`
-- Do not add project secrets, submit RFQs, or remove noindex without review.
+- Worker name: `plumbing-source` (must match Cloudflare's existing project)
+- The `wrangler.jsonc` file configures `assets.directory` as `./public`.
+- Production branch: `main` (README only until PR approval/merge)
+- Build command: leave empty; deploy command: `npx wrangler deploy`.
+- Enable **Preview Builds** for feature branches; preview command: `npx wrangler preview`.
+- Inspect the Worker Preview created from `feat/v0-1-site-foundation`. Only after acceptance, merge the PR to `main` for automatic production deployment.
+- No API secrets needed in V0.1. Do not remove noindex or enable personal data collection without review.
