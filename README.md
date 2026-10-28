@@ -27,3 +27,11 @@ The generated `public/` files are committed in this standalone repository. No ru
 - Enable **Preview Builds** for feature branches; preview command: `npx wrangler preview`.
 - Inspect the Worker Preview created from `feat/v0-1-site-foundation`. Only after acceptance, merge the PR to `main` for automatic production deployment.
 - No API secrets needed in V0.1. Do not remove noindex or enable personal data collection without review.
+
+
+## English and Chinese / 中英文
+- The navigation includes a 中文 / English switch. `?lang=zh` and `?lang=en` select a shareable language; explicit URL choice overrides a saved preference. First visits default to English; the switch saves the choice locally when storage is available.
+- Both Chinese and English product terms work in either language. Search and category state are preserved when switching. Titles, descriptions, accessible labels, empty states and disclosures are translated.
+- English content remains in `site.json`; Chinese industry content is in `site.json` → `locales.zh-CN`. Shared labels and the small runtime are maintained in `scripts/localize.mjs`. `public/app.js` is the generated runtime.
+- After changing translations, or after running the original template generator, run `node scripts/localize.mjs` from this repository to restore the bilingual assets. Commit the updated public files. Do not regenerate the sibling PENG Nexus repository to change language support here.
+- CI covers both languages, mixed-language search, category preservation, URL precedence, saved preference, navigation and screenshots at 320/390/768/1440px. Without JavaScript, the English reference content remains readable and the inactive language control stays hidden.

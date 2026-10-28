@@ -59,6 +59,52 @@ test('Chromium responsive layout, navigation, and live product filtering', async
           assert.equal(await page.locator('[data-product]:not([data-category="' + category + '"]):visible').count(), 0);
 
           await page.screenshot({ path: 'artifacts/site-' + width + '.png', fullPage: true });
+          // Both locales must keep the active filter, search and accessibility labels.
+          const englishHeading=await page.locator('h1').innerText();
+          const englishName=await allCards.first().locator('h3').innerText();
+          const englishTitle=await page.title();
+          const categoryCount=await page.locator('[data-product]:visible').count();
+          const language=page.locator('#language-switch');
+          await language.click();
+          assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
+          assert.equal(await language.innerText(),'English');
+          assert.notEqual(await page.locator('h1').innerText(),englishHeading);
+          assert.notEqual(await page.title(),englishTitle);
+          assert.equal(await page.locator('[data-product]:visible').count(),categoryCount);
+          assert.equal(await chip.getAttribute('aria-pressed'),'true');
+          assert.equal(await input.getAttribute('aria-label'),'搜索产品参考');
+          assert.match(await input.getAttribute('placeholder'),/搜索/);
+          assert.match(await page.locator('#suppliers').innerText(),/筹备中/);
+          assert.match(await page.locator('.notice').innerText(),/知识原型/);
+          const zhOverflow=await page.evaluate(()=>({viewport:document.documentElement.clientWidth,page:document.documentElement.scrollWidth}));
+          assert.ok(zhOverflow.page<=zhOverflow.viewport+1,'Chinese layout overflow');
+          await page.locator('[data-filter="all"]').click();
+          const chineseName=await allCards.first().locator('h3').innerText();
+          await input.fill(chineseName);
+          assert.ok(await page.locator('[data-product]:visible').count()>0,'Chinese search failed');
+          await input.fill(englishName);
+          assert.ok(await page.locator('[data-product]:visible').count()>0,'English search in Chinese failed');
+          await input.fill('__no_match__');
+          assert.equal(await page.locator('#no-results').isVisible(),true);
+          assert.match(await page.locator('#no-results').innerText(),/未找到/);
+          assert.equal(await page.locator('#result-count').innerText(),'显示 0 项产品参考');
+          await input.fill('');
+          await page.locator('nav a[href="#guides"]').click();
+          assert.equal(new URL(page.url()).hash,'#guides');
+          await page.goto(site+'?lang=zh');
+          await page.screenshot({path:'artifacts/site-zh-'+width+'.png',fullPage:true});
+          await page.goto(site);
+          assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN','saved preference lost');
+          await page.goto(site+'?lang=en');
+          assert.equal(await page.locator('html').getAttribute('lang'),'en','URL must override saved preference');
+          assert.equal(await page.locator('h1').innerText(),englishHeading);
+          await page.locator('#language-switch').click();
+          await page.locator('#language-switch').click();
+          assert.equal(await page.title(),englishTitle);
+          await input.fill(chineseName);
+          assert.ok(await page.locator('[data-product]:visible').count()>0,'Chinese search in English failed');
+          await input.fill('');
+
           assert.deepEqual(errors, [], 'uncaught browser errors');
         } finally {
           await page.close();
@@ -69,3 +115,4 @@ test('Chromium responsive layout, navigation, and live product filtering', async
     await browser.close();
   }
 });
+
