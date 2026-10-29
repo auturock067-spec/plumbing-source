@@ -130,7 +130,7 @@ test('all six local illustrations render at mobile and desktop widths with bilin
         const imgs=page.locator('[data-product] .product-image img');
         assert.equal(await imgs.count(),6);
         const loaded=await imgs.evaluateAll(async images => Promise.all(images.map(async img => {
-          try {await img.decode();} catch (error) {return {ok:false,src:img.getAttribute('src'),error:String(error)};}
+          img.loading='eager'; try {await Promise.race([img.decode(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('SVG image decode timed out')),8000))]);} catch (error) {return {ok:false,src:img.getAttribute('src'),error:String(error)};}
           return {ok:img.complete && img.naturalWidth===800 && img.naturalHeight===480,src:img.getAttribute('src'),width:img.naturalWidth};
         })));
         assert.ok(loaded.every(x=>x.ok),'broken SVG illustrations: '+JSON.stringify(loaded));
@@ -158,7 +158,7 @@ test('hero and guide artwork is decoded, labeled and responsive',async()=>{
         const pictures=page.locator('.hero-visual img, .guide-image img');
         assert.equal(await pictures.count(),4);
         const status=await pictures.evaluateAll(async images=>Promise.all(images.map(async img=>{
-          try{await img.decode();return {ok:img.naturalWidth===800&&img.naturalHeight===480,alt:img.alt};}
+          img.loading='eager'; try{await Promise.race([img.decode(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('SVG image decode timed out')),8000))]);return {ok:img.naturalWidth===800&&img.naturalHeight===480,alt:img.alt};}
           catch(e){return {ok:false,error:String(e),src:img.src};}
         })));
         assert.ok(status.every(x=>x.ok&&x.alt),'Broken illustration: '+JSON.stringify(status));
