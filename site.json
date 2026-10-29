@@ -32,7 +32,8 @@
         "Elbow",
         "Threaded"
       ],
-      "caution": "Check BSP/NPT thread compatibility and applicable drinking-water rules."
+      "caution": "Check BSP/NPT thread compatibility and applicable drinking-water rules.",
+      "image": "./images/brass-threaded-elbow.svg"
     },
     {
       "name": "Compression coupling",
@@ -43,7 +44,8 @@
         "Compression",
         "Coupling"
       ],
-      "caution": "Installation procedures and permitted tubing vary by system."
+      "caution": "Installation procedures and permitted tubing vary by system.",
+      "image": "./images/compression-coupling.svg"
     },
     {
       "name": "Ball valve",
@@ -54,7 +56,8 @@
         "Isolation",
         "Quarter-turn"
       ],
-      "caution": "Valve ratings must match temperature, pressure and service medium."
+      "caution": "Valve ratings must match temperature, pressure and service medium.",
+      "image": "./images/ball-valve.svg"
     },
     {
       "name": "Check valve",
@@ -65,7 +68,8 @@
         "Non-return",
         "Flow"
       ],
-      "caution": "Not a substitute for a legally required backflow prevention assembly."
+      "caution": "Not a substitute for a legally required backflow prevention assembly.",
+      "image": "./images/check-valve.svg"
     },
     {
       "name": "Stainless steel tee",
@@ -76,7 +80,8 @@
         "Stainless steel",
         "Tee"
       ],
-      "caution": "Confirm exact grade and test documents with the manufacturer."
+      "caution": "Confirm exact grade and test documents with the manufacturer.",
+      "image": "./images/stainless-steel-tee.svg"
     },
     {
       "name": "Pressure reducing valve",
@@ -87,7 +92,8 @@
         "Regulation",
         "PRV"
       ],
-      "caution": "Selection and installation should be checked by a qualified professional."
+      "caution": "Selection and installation should be checked by a qualified professional.",
+      "image": "./images/pressure-reducing-valve.svg"
     }
   ],
   "guides": [
