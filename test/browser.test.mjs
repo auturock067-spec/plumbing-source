@@ -75,7 +75,7 @@ test('Chromium responsive layout, navigation, and live product filtering', async
           assert.equal(await input.getAttribute('aria-label'),'搜索产品参考');
           assert.match(await input.getAttribute('placeholder'),/搜索/);
           assert.match(await page.locator('#suppliers').innerText(),/筹备中/);
-          assert.match(await page.locator('.notice').innerText(),/知识原型/);
+          assert.match(await page.locator('#about .notice').innerText(),/知识原型/);
           const zhOverflow=await page.evaluate(()=>({viewport:document.documentElement.clientWidth,page:document.documentElement.scrollWidth}));
           assert.ok(zhOverflow.page<=zhOverflow.viewport+1,'Chinese layout overflow');
           await page.locator('[data-filter="all"]').click();
