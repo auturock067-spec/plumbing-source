@@ -1,6 +1,7 @@
 // English HTML remains the no-JavaScript fallback. Chinese strings are bundled locally.
 (()=>{
   const zh={
+  "Build RFQ checklist": "生成询价核对清单",
   "Explore": "行业概览",
   "Products": "产品",
   "Guides": "采购指南",
