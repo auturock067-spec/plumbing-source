@@ -43,3 +43,22 @@ test('Cloudflare Workers serves only reviewed static assets', () => {
   assert.match(html, /<script\s+src="\.\/app\.js"\s+defer><\/script>/);
   assert.match(html, /href="\.\/styles\.css"/);
 });
+
+
+test('all six product cards have original local SVG illustrations and accessible alt text', async () => {
+  const pictureCards = [...html.matchAll(/<article class="card product-card"[\s\S]*?<\/article>/g)].map(m => m[0]);
+  assert.equal(pictureCards.length, cfg.products.length);
+  for (const [index, product] of cfg.products.entries()) {
+    assert.match(product.image || '', /^\.\/images\/[a-z0-9-]+\.svg$/);
+    const svg = await file('public/' + product.image.replace(/^\.\//, ''));
+    assert.match(svg, /^<svg[\s\S]*viewBox="0 0 800 480"/);
+    assert.match(svg, /<\/svg>$/);
+    assert.doesNotMatch(svg, /<script|<foreignObject|https?:\/\//i);
+    const card = pictureCards[index];
+    assert.ok(card.includes('src="' + product.image + '"'), 'missing image: ' + product.name);
+    assert.ok(card.includes('alt="' + product.name + '"'), 'missing accessible alt: ' + product.name);
+  }
+  assert.match(html, /Original illustrations for identification only/);
+  assert.match(css, /\.product-card \.product-image/);
+  assert.match(js, /'\[aria-label\]/);
+});
