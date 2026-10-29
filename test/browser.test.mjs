@@ -146,3 +146,25 @@ test('all six local illustrations render at mobile and desktop widths with bilin
     }
   } finally {await browser.close();}
 });
+
+
+test('hero and guide artwork is decoded, labeled and responsive',async()=>{
+  const browser=await chromium.launch({headless:true});
+  try{
+    for(const width of [390,1440]){
+      const page=await browser.newPage({viewport:{width,height:900}});
+      try{
+        await page.goto(site+'?lang=zh',{waitUntil:'load'});
+        const pictures=page.locator('.hero-visual img, .guide-image img');
+        assert.equal(await pictures.count(),4);
+        const status=await pictures.evaluateAll(async images=>Promise.all(images.map(async img=>{
+          try{await img.decode();return {ok:img.naturalWidth===800&&img.naturalHeight===480,alt:img.alt};}
+          catch(e){return {ok:false,error:String(e),src:img.src};}
+        })));
+        assert.ok(status.every(x=>x.ok&&x.alt),'Broken illustration: '+JSON.stringify(status));
+        const layout=await page.evaluate(()=>({viewport:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
+        assert.ok(layout.scroll<=layout.viewport+1,'image layout overflow '+JSON.stringify(layout));
+      }finally{await page.close();}
+    }
+  }finally{await browser.close();}
+});
