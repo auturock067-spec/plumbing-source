@@ -116,3 +116,33 @@ test('Chromium responsive layout, navigation, and live product filtering', async
   }
 });
 
+
+
+test('all six local illustrations render at mobile and desktop widths with bilingual alt text', async () => {
+  const browser = await chromium.launch({headless: true});
+  try {
+    for (const width of [320, 390, 768, 1440]) {
+      const page = await browser.newPage({viewport: {width, height: 900}});
+      const errors = [];
+      page.on('pageerror', err => errors.push(String(err)));
+      try {
+        await page.goto(site + '?lang=en', {waitUntil:'load'});
+        const imgs=page.locator('[data-product] .product-image img');
+        assert.equal(await imgs.count(),6);
+        const loaded=await imgs.evaluateAll(async images => Promise.all(images.map(async img => {
+          try {await img.decode();} catch (error) {return {ok:false,src:img.getAttribute('src'),error:String(error)};}
+          return {ok:img.complete && img.naturalWidth===800 && img.naturalHeight===480,src:img.getAttribute('src'),width:img.naturalWidth};
+        })));
+        assert.ok(loaded.every(x=>x.ok),'broken SVG illustrations: '+JSON.stringify(loaded));
+        assert.equal(await imgs.first().getAttribute('alt'),await page.locator('[data-product] h3').first().innerText());
+        await page.locator('#language-switch').click();
+        assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
+        const chineseAlt=await imgs.first().getAttribute('alt');
+        assert.equal(chineseAlt,await page.locator('[data-product] h3').first().innerText());
+        const overflow=await page.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
+        assert.ok(overflow.scroll<=overflow.client+1,JSON.stringify(overflow));
+        assert.deepEqual(errors,[]);
+      } finally {await page.close();}
+    }
+  } finally {await browser.close();}
+});
