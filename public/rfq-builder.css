@@ -1,0 +1,17 @@
+/* PlumbingSource RFQ: layout scoped to avoid shared template changes */
+#rfq-builder .rfq-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 8px 35px rgba(21,36,58,.04)}
+#rfq-builder .rfq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}
+#rfq-builder .rfq-field{display:flex;flex-direction:column;min-width:0;gap:5px}
+#rfq-builder .rfq-field label{font-size:14px;font-weight:700}
+#rfq-builder .rfq-field input,#rfq-builder .rfq-field select,#rfq-builder .rfq-field textarea{width:100%;min-width:0;padding:12px;border:1px solid #b9c7d0;border-radius:10px;background:#fff;color:var(--ink);font:inherit}
+#rfq-builder .rfq-field textarea{min-height:80px;resize:vertical}
+#rfq-builder .rfq-field [aria-invalid="true"]{border-color:#b42318;outline-offset:2px}
+#rfq-builder .rfq-error{min-height:1em;color:#a61b19;font-size:12px}
+#rfq-builder .rfq-hint{color:var(--muted);font-size:12px}
+#rfq-builder .rfq-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:15px 0}
+#rfq-builder button{font:inherit}
+#rfq-builder button[disabled]{opacity:.5;cursor:not-allowed}
+#rfq-builder .rfq-status{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+#rfq-builder #rfq-missing{margin-top:14px;padding:13px 16px;background:var(--accent-soft);border-radius:10px;font-size:14px;overflow-wrap:anywhere}
+#rfq-builder #rfq-output{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f6f7;padding:18px;border-radius:12px;border:1px solid var(--line);font:13px/1.6 ui-monospace,Consolas,monospace;max-width:100%;margin-top:12px}
+@media(max-width:600px){#rfq-builder .rfq-panel{padding:17px}#rfq-builder .rfq-grid{grid-template-columns:1fr;gap:12px}#rfq-builder .rfq-actions .btn{width:100%}}
