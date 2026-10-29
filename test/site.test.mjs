@@ -62,3 +62,17 @@ test('all six product cards have original local SVG illustrations and accessible
   assert.match(css, /\.product-card \.product-image/);
   assert.match(js, /'\[aria-label\]/);
 });
+
+
+test('hero and three buying guides have local illustration references', async()=>{
+  assert.equal((html.match(/class="hero-visual"/g)||[]).length,1);
+  assert.equal((html.match(/class="guide-image"/g)||[]).length,cfg.guides.length);
+  const paths=[cfg.heroImage,...cfg.guides.map(g=>g.image)];
+  assert.equal(paths.length,4);
+  for (const src of paths) {
+    assert.match(src||'',/^\.\/images\/[a-z0-9-]+\.svg$/);
+    assert.ok(html.includes('src="'+src+'"'),'Missing illustrative source in page: '+src);
+    const fileText=await file('public/'+src.slice(2));
+    assert.match(fileText,/<svg[^>]*viewBox="0 0 800 480"/);
+  }
+});
