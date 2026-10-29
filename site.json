@@ -104,7 +104,8 @@
         "Confirm the exact thread standard and size on drawings.",
         "Ask for dimensions or gauges—not a product photo alone.",
         "Specify sealing method, fluid type and local code requirements."
-      ]
+      ],
+      "image": "./images/brass-threaded-elbow.svg"
     },
     {
       "title": "How to write a clearer RFQ",
@@ -113,7 +114,8 @@
         "List quantity, drawing and end-use conditions.",
         "State test reports, material certificates and packaging requirements.",
         "Ask for sample policy, lead time, trade terms and exclusions."
-      ]
+      ],
+      "image": "./images/ball-valve.svg"
     },
     {
       "title": "Checking a valve quotation",
@@ -122,7 +124,8 @@
         "Confirm material grades and genuine test documents.",
         "Compare pressure/temperature envelopes and product standards.",
         "Clarify inspection scope, spare parts and warranty terms."
-      ]
+      ],
+      "image": "./images/pressure-reducing-valve.svg"
     }
   ],
   "faq": [
@@ -277,5 +280,6 @@
       ],
       "disclosure": "技术说明仅用于一般知识学习，不代表工程批准、采购建议或产品合规证明。"
     }
-  }
+  },
+  "heroImage": "./images/ball-valve.svg"
 }
