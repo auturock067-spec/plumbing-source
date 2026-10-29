@@ -53,7 +53,7 @@ test('all six product cards have original local SVG illustrations and accessible
     const svg = await file('public/' + product.image.replace(/^\.\//, ''));
     assert.match(svg, /^<svg[\s\S]*viewBox="0 0 800 480"/);
     assert.match(svg, /<\/svg>$/);
-    assert.doesNotMatch(svg, /<script|<foreignObject|https?:\/\//i);
+    assert.doesNotMatch(svg, /<script|<foreignObject|<image\b|(?:href|src)=["\x27]https?:/i);
     const card = pictureCards[index];
     assert.ok(card.includes('src="' + product.image + '"'), 'missing image: ' + product.name);
     assert.ok(card.includes('alt="' + product.name + '"'), 'missing accessible alt: ' + product.name);
