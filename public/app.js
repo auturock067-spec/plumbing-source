@@ -49,7 +49,7 @@
   "Independent plumbing fittings reference library, comparison checklists and supplier due diligence guidance for international buyers.": "独立水暖管件参考库，为国际采购者提供规格比较清单和供应商尽职调查指南。",
   "Plumbing & piping procurement": "水暖与管道采购",
   "Make every fitting specification count.": "让每一项管件规格都有依据。",
-  "Understand valves, connectors and pipe fittings before you compare suppliers. Clear product references, practical checks and sourcing knowledge in one place.": "比较供应商之前，先了解阀门、连接件和管件。在这里查阅清晰的产品参考、实用核查要点及采购知识。",
+  "For overseas importers and technical buyers: organize pipe-fitting requirements into a bilingual RFQ checklist before comparing manufacturers. Independent guidance only—no sales, supplier endorsement or product certification.": "面向海外进口商与技术采购人员：先将管件需求整理成中英文询价核对清单，再比较制造商。本站仅提供独立采购知识，不销售产品、不为供应商背书，也不提供产品认证。",
   "The right fitting starts with the right questions.": "选对管件，从问对问题开始。",
   "Material, thread profile, working conditions and local compliance requirements matter more than a matching photo.": "材料、螺纹形式、工况及当地合规要求，比外观相似更重要。",
   "Threads & connections": "螺纹与连接方式",
