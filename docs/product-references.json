@@ -1,0 +1,50 @@
+[
+ {
+  "slug":"ball-valve","name":["Ball valve","球阀"],"category":["Isolation valves","隔离阀"],"image":"ball-valve.svg","index":2,
+  "tagline":["Start with isolation duty. Then specify the connection and operating conditions.","先明确隔离用途，再确认接口和使用工况。"],
+  "overview":["A ball valve is a quarter-turn valve type commonly considered for shut-off duty. Similar-looking bodies can have different port sizes, seats, connections and permitted services. Use this reference to prepare questions; select an actual model against its current manufacturer documents.","球阀是一类常用于关断用途的四分之一转阀门。外观相似的产品，通径、阀座、连接方式及允许使用的介质可能不同。本页帮助整理采购问题；实际型号应依据制造商最新资料选定。"],
+  "fields":[
+   [["Duty","用途"],["State whether the requirement is isolation; confirm any control duty with the manufacturer.","说明是否用于隔离；如需调节用途，应向制造商确认。"]],
+   [["Connection","连接方式"],["Record both ends: standard, nominal size and male/female thread or other joint type.","分别写明两端的标准、公称尺寸及内外螺纹或其他连接形式。"]],
+   [["Wetted materials","接液材料"],["Request exact body, ball, seat and seal materials for the intended medium.","按实际介质索取阀体、球体、阀座及密封件的准确材料。"]],
+   [["Operating envelope","使用工况"],["Provide medium, working pressure and temperature together; ask for the model's applicable rating curve.","同时提供介质、工作压力和温度，并索取对应型号的适用额定曲线。"]],
+   [["Port and operation","通径与操作"],["Clarify full/reduced port, handle clearance and any locking requirement.","明确全通径或缩径、手柄操作空间以及锁定要求。"]]
+  ],
+  "mistakes":[["Comparing nominal size alone while ignoring bore and end connections.","只比较公称尺寸，忽略实际通径和端部连接。"],["Treating a pressure figure as valid at every temperature.","认为标注的压力值适用于所有温度。"],["Assuming a brass appearance proves alloy grade or drinking-water approval.","凭黄铜外观判断合金牌号或饮用水认可。"]],
+  "questions":[["Which exact model and drawing match both end connections?","哪个具体型号及图纸与两端接口一致？"],["What is the pressure/temperature rating for our stated service?","对于所述使用条件，适用的压力与温度额定范围是什么？"],["Which seat and seal materials will be supplied?","实际供货的阀座及密封件采用什么材料？"],["Which model-specific documents and spare parts can be provided?","能提供哪些对应型号的文件和备件？"]],
+  "compare":["A ball valve provides manual isolation; a check valve responds to flow direction. They address different requirements and are not direct substitutes.","球阀用于手动隔离，止回阀响应流动方向。两者解决不同需求，不能直接相互替代。"],
+  "sources":[{"title":"Watts LFFBV-3C — manufacturer series reference","url":"https://www.watts.com/products/plumbing-flow-control-solutions/shutoff-valves/ball-valves/lffbv-3c","scope":["Example of a documented ball-valve series, not the specification of every ball valve.","展示有资料支持的球阀系列，不代表所有球阀的统一规格。"]}]
+ },
+ {
+  "slug":"check-valve","name":["Check valve","止回阀"],"category":["Flow-direction valves","流向控制阀"],"image":"check-valve.svg","index":3,
+  "tagline":["Specify the flow direction, opening behaviour and installation position.","明确流向、开启特性和安装方向。"],
+  "overview":["A check valve is intended to limit reverse flow in a compatible system. Its operating behaviour depends on design and installation. Do not infer orientation or performance from the external shape, and do not treat a generic check valve as a certified backflow-prevention assembly.","止回阀用于在相容系统中限制逆流，其动作特性取决于设计及安装条件。不能根据外形推断安装方向或性能，也不能把普通止回阀视为经过认证的倒流防止装置。"],
+  "fields":[
+   [["Flow direction","流动方向"],["Show intended flow on the piping drawing and confirm the body's direction marking.","在管道图纸上标明预期流向，并确认阀体上的方向标识。"]],
+   [["Opening behaviour","开启特性"],["Ask which design is offered and whether opening-pressure and flow-loss data are available.","询问所供结构类型，以及是否有开启压力和流动损失数据。"]],
+   [["Installation position","安装方向"],["Confirm permitted orientation for the exact model; do not generalize from another series.","核查具体型号允许的安装方向，不从其他系列直接推断。"]],
+   [["Materials and service","材料与介质"],["Identify body, seat and spring materials where applicable, plus medium and temperature.","按具体结构确认阀体、阀座及弹簧材料，并明确介质与温度。"]],
+   [["System requirements","系统要求"],["Confirm connection details, maintenance access and any required certified backflow protection separately.","分别确认连接细节、维护空间及所需的经认证倒流防护。"]]
+  ],
+  "mistakes":[["Installing against the intended flow direction.","安装方向与预期流向相反。"],["Assuming every check valve permits vertical installation.","认为所有止回阀都允许竖直安装。"],["Using a generic check valve in place of a required backflow-prevention assembly.","用普通止回阀替代要求配置的倒流防止装置。"]],
+  "questions":[["Which installation orientations are permitted for this model?","该型号允许哪些安装方向？"],["What opening-pressure and flow-loss data apply to our operating range?","在我们的工况范围内，适用的开启压力及流动损失数据是什么？"],["How is service direction marked and checked before installation?","如何标识使用流向，并在安装前核对？"],["What inspection or maintenance procedure is specified?","规定的检查或维护程序是什么？"]],
+  "compare":["Check valves address reverse-flow behaviour. Isolation valves and certified backflow assemblies have different purposes; compare against the actual system requirement.","止回阀针对逆流特性。隔离阀及经认证倒流防止装置具有不同用途，应根据实际系统要求比较。"],
+  "sources":[{"title":"Watts LF600 — manufacturer series reference","url":"https://www.watts.com/products/Plumbing-Flow-Control-Solutions/Check-Valves/LF600","scope":["An example with documented installation options; these options are not a rule for other check valves.","提供安装方式资料的一个系列示例，其允许方式不代表其他止回阀。"]}]
+ },
+ {
+  "slug":"brass-threaded-elbow","name":["Brass threaded elbow","黄铜螺纹弯头"],"category":["Threaded fittings","螺纹管件"],"image":"brass-threaded-elbow.svg","index":0,
+  "tagline":["Match the thread specification, not just the nominal size or appearance.","匹配准确的螺纹规格，而不只是公称尺寸或外观。"],
+  "overview":["A threaded elbow changes the direction of a pipe connection. Brass appearance does not establish the alloy, service suitability or thread standard. Identify the connection at each end and request the manufacturer's dimensional drawing before specifying a mating component.","螺纹弯头用于改变管道连接方向。黄铜外观不能证明合金牌号、介质适用性或螺纹标准。应分别识别两端接口，在指定配合件前索取制造商尺寸图。"],
+  "fields":[
+   [["Thread standard","螺纹标准"],["Record the exact standard and thread form for each end; a shared size label is not enough.","分别写明两端准确的标准及螺纹形式，仅有相同尺寸标识并不充分。"]],
+   [["End configuration","两端配置"],["Specify male/female ends, equal/reducing sizes and required elbow angle.","明确内外螺纹、等径或异径尺寸，以及所需弯头角度。"]],
+   [["Material identity","材料身份"],["Request alloy designation and supporting material documentation where required.","索取合金牌号，并在需要时提供相应材质文件。"]],
+   [["Dimensions","尺寸"],["Check overall envelope, wrench flats and available assembly space against a drawing.","依据图纸核查外形尺寸、扳手位及可用装配空间。"]],
+   [["Sealing and service","密封与工况"],["Confirm the specified sealing method, medium and model-specific pressure/temperature limits.","确认指定密封方法、介质及对应型号的压力与温度限制。"]]
+  ],
+  "mistakes":[["Assuming BSP and NPT can be interchanged because their labels look similar.","因标识相似而认为 BSP 与 NPT 可以互换。"],["Treating nominal pipe size as a measured outside diameter.","把管道公称尺寸直接当作实测外径。"],["Using a material or pressure rating from a different fitting or alloy.","套用其他管件或合金的材料或压力额定值。"]],
+  "questions":[["What exact thread standard and end configuration will be supplied?","实际供货的螺纹标准及两端配置是什么？"],["Can you provide a dimensioned drawing and material designation?","能否提供带尺寸图纸及材料牌号？"],["Which sealing and assembly instructions apply?","适用哪些密封和装配说明？"],["What evidence supports suitability for our stated medium and conditions?","哪些资料支持其适用于我们所述介质及工况？"]],
+  "compare":["A threaded elbow is different from a compression elbow. Match the connection system and mating component before comparing suppliers or prices.","螺纹弯头与卡套式弯头不同。应先匹配连接系统及配合件，再比较供应商或价格。"],
+  "sources":[{"title":"Swagelok B-4-E — manufacturer fitting reference","url":"https://products.swagelok.com/en/c/90-degree-elbows/p/B-4-E","scope":["A specific female-NPT brass elbow example; not a universal rating or interchangeability claim.","具体内螺纹 NPT 黄铜弯头示例，不代表通用额定值或互换性声明。"]},{"title":"Swagelok Pipe Fittings catalog MS-01-147","url":"https://www.swagelok.com/downloads/webcatalogs/en/MS-01-147.pdf","scope":["Reference for identifying separate connection types and dimension fields; consult the current catalog revision.","用于识别不同连接形式及尺寸字段；请查阅当前版本的产品目录。"]}]
+ }
+]

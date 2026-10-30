@@ -50,8 +50,8 @@
   "Plumbing fittings & sourcing knowledge": "水暖管件与采购知识",
   "Independent plumbing fittings reference library, comparison checklists and supplier due diligence guidance for international buyers.": "独立水暖管件参考库，为国际采购者提供规格比较清单和供应商尽职调查指南。",
   "Plumbing & piping procurement": "水暖与管道采购",
-  "Make every fitting specification count.": "让每一项管件规格都有依据。",
-  "For overseas importers and technical buyers: organize pipe-fitting requirements into a bilingual RFQ checklist before comparing manufacturers. Independent guidance only—no sales, supplier endorsement or product certification.": "面向海外进口商与技术采购人员：先将管件需求整理成中英文询价核对清单，再比较制造商。本站仅提供独立采购知识，不销售产品、不为供应商背书，也不提供产品认证。",
+  "Find the right fitting. Ask better questions.": "认识管件，问对问题。",
+  "A visual reference for technical buyers. Explore product types, check the questions that matter, and prepare a clearer bilingual RFQ.": "面向技术采购者的图文参考库。了解产品类型，核查关键问题，整理更清晰的中英文询价清单。",
   "The right fitting starts with the right questions.": "选对管件，从问对问题开始。",
   "Material, thread profile, working conditions and local compliance requirements matter more than a matching photo.": "材料、螺纹形式、工况及当地合规要求，比外观相似更重要。",
   "Threads & connections": "螺纹与连接方式",
@@ -121,6 +121,16 @@
   "Are the manufacturers verified?": "制造商是否经过验证？",
   "No manufacturer profiles have been published. Future listings will distinguish public records, supplier declarations and independently reviewed documents.": "目前尚未发布制造商资料。未来收录时，将区分公开记录、供应商声明及经过独立审核的文件。",
   "Technical notes are general education, not engineering approval, purchase advice or proof of product compliance.": "技术说明仅用于一般知识学习，不代表工程批准、采购建议或产品合规证明。",
+  "A clearer starting point for procurement.": "让采购调研有一个清晰起点。",
+  "Product types, not supplier offers": "产品类型参考，并非供应商报价",
+  "Original illustration · Not a product photo": "原创示意图 · 非实物照片",
+  "03 detailed references": "3 个详细产品参考",
+  "EN / 中文 content": "中英文内容",
+  "No account required": "无需注册账户",
+  "From product research to a better specification.": "从产品调研，走向更清晰的规格要求。",
+  "Prepare your RFQ →": "整理询价清单 →",
+  "Read product reference": "查看详细参考",
+  "Product reference": "产品参考",
   "PlumbingSource | Plumbing fittings & sourcing knowledge": "PlumbingSource | 水暖管件与采购知识",
   "PlumbingSource home": "PlumbingSource 首页",
   "Technical notes are general education, not engineering approval, purchase advice or proof of product compliance. This website is an early knowledge prototype. It is not a trading company, payment intermediary or product certification body.": "技术说明仅用于一般知识学习，不代表工程批准、采购建议或产品合规证明。 本站是早期知识原型，不是贸易公司、支付中介或产品认证机构。"
@@ -181,6 +191,7 @@
     toggle.textContent=chinese?'English':'中文';
     toggle.setAttribute('lang',chinese?'en':'zh-CN');
     toggle.setAttribute('aria-label',chinese?'切换为英文':'Switch to Chinese');
+    document.querySelectorAll('[data-language-link]').forEach(a=>{const url=new URL(a.getAttribute('href'),location.href);url.searchParams.set('lang',language);a.href=url.href;});
     if(remember){
       try{localStorage.setItem('site-language',language);}catch{/* Storage can be blocked. */}
       try{const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);}catch{/* File previews may restrict history. */}
