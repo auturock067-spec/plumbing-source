@@ -1,0 +1,297 @@
+{
+  "brand": "PlumbingSource",
+  "titleSuffix": "Plumbing fittings & sourcing knowledge",
+  "description": "Independent plumbing fittings reference library, comparison checklists and supplier due diligence guidance for international buyers.",
+  "eyebrow": "Plumbing & piping procurement",
+  "hero": "Find the right fitting. Ask better questions.",
+  "intro": "A visual reference for technical buyers. Explore product types, check the questions that matter, and prepare a clearer bilingual RFQ.",
+  "heroCardTitle": "The right fitting starts with the right questions.",
+  "heroCardCopy": "Material, thread profile, working conditions and local compliance requirements matter more than a matching photo.",
+  "topics": [
+    {
+      "title": "Threads & connections",
+      "summary": "BSP, NPT, compression, press and push-fit systems are not universally interchangeable."
+    },
+    {
+      "title": "Material selection",
+      "summary": "Brass, copper, stainless steel and polymers require application-specific material checks."
+    },
+    {
+      "title": "Pressure, temperature & media",
+      "summary": "Working conditions and approvals influence whether a valve or fitting is suitable."
+    }
+  ],
+  "products": [
+    {
+      "name": "Brass threaded elbow",
+      "category": "Fittings",
+      "description": "A direction-changing connector used in threaded pipework assemblies.",
+      "spec": "Nominal size, male/female threads, thread type, material designation.",
+      "tags": [
+        "Brass",
+        "Elbow",
+        "Threaded"
+      ],
+      "caution": "Check BSP/NPT thread compatibility and applicable drinking-water rules.",
+      "image": "./images/brass-threaded-elbow.svg"
+    },
+    {
+      "name": "Compression coupling",
+      "category": "Fittings",
+      "description": "A mechanical connector often selected for compatible copper or plastic tubing.",
+      "spec": "Tube outside diameter, ferrule design, pipe compatibility, pressure rating.",
+      "tags": [
+        "Compression",
+        "Coupling"
+      ],
+      "caution": "Installation procedures and permitted tubing vary by system.",
+      "image": "./images/compression-coupling.svg"
+    },
+    {
+      "name": "Ball valve",
+      "category": "Valves",
+      "description": "Quarter-turn isolation valve frequently used in fluid distribution systems.",
+      "spec": "Bore size, body/seat material, valve rating, end connections.",
+      "tags": [
+        "Isolation",
+        "Quarter-turn"
+      ],
+      "caution": "Valve ratings must match temperature, pressure and service medium.",
+      "image": "./images/ball-valve.svg"
+    },
+    {
+      "name": "Check valve",
+      "category": "Valves",
+      "description": "One-way valve intended to reduce reverse flow in compatible systems.",
+      "spec": "Cracking pressure, orientation, connection, materials, test standard.",
+      "tags": [
+        "Non-return",
+        "Flow"
+      ],
+      "caution": "Not a substitute for a legally required backflow prevention assembly.",
+      "image": "./images/check-valve.svg"
+    },
+    {
+      "name": "Stainless steel tee",
+      "category": "Fittings",
+      "description": "Three-way branch connector for piping installations.",
+      "spec": "Grade, branch sizing, schedule/wall thickness, joining method.",
+      "tags": [
+        "Stainless steel",
+        "Tee"
+      ],
+      "caution": "Confirm exact grade and test documents with the manufacturer.",
+      "image": "./images/stainless-steel-tee.svg"
+    },
+    {
+      "name": "Pressure reducing valve",
+      "category": "Valves",
+      "description": "Regulating valve used where downstream pressure must be controlled.",
+      "spec": "Inlet range, adjustable outlet range, flow capacity, certifications.",
+      "tags": [
+        "Regulation",
+        "PRV"
+      ],
+      "caution": "Selection and installation should be checked by a qualified professional.",
+      "image": "./images/pressure-reducing-valve.svg"
+    }
+  ],
+  "guides": [
+    {
+      "title": "BSP vs NPT: what to check",
+      "summary": "Nominally similar threaded fittings can differ in profile and sealing approach.",
+      "checks": [
+        "Confirm the exact thread standard and size on drawings.",
+        "Ask for dimensions or gauges—not a product photo alone.",
+        "Specify sealing method, fluid type and local code requirements."
+      ],
+      "image": "./images/brass-threaded-elbow.svg"
+    },
+    {
+      "title": "How to write a clearer RFQ",
+      "summary": "Incomplete specifications cause wrong quotations and costly substitutions.",
+      "checks": [
+        "List quantity, drawing and end-use conditions.",
+        "State test reports, material certificates and packaging requirements.",
+        "Ask for sample policy, lead time, trade terms and exclusions."
+      ],
+      "image": "./images/ball-valve.svg"
+    },
+    {
+      "title": "Checking a valve quotation",
+      "summary": "Price comparisons only matter when the technical basis matches.",
+      "checks": [
+        "Confirm material grades and genuine test documents.",
+        "Compare pressure/temperature envelopes and product standards.",
+        "Clarify inspection scope, spare parts and warranty terms."
+      ],
+      "image": "./images/pressure-reducing-valve.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does this site sell fittings?",
+      "answer": "No. This is an educational reference prototype; there is no checkout or live supplier quotation service."
+    },
+    {
+      "question": "Can two similar-looking fittings use the same threads?",
+      "answer": "Not necessarily. Thread geometry and applicable sealing methods can differ. Confirm by standard and drawing rather than appearance."
+    },
+    {
+      "question": "Are the manufacturers verified?",
+      "answer": "No manufacturer profiles have been published. Future listings will distinguish public records, supplier declarations and independently reviewed documents."
+    }
+  ],
+  "disclosure": "Technical notes are general education, not engineering approval, purchase advice or proof of product compliance.",
+  "locales": {
+    "zh-CN": {
+      "titleSuffix": "水暖管件与采购知识",
+      "description": "独立水暖管件参考库，为国际采购者提供规格比较清单和供应商尽职调查指南。",
+      "eyebrow": "水暖与管道采购",
+      "hero": "认识管件，问对问题。",
+      "intro": "面向技术采购者的图文参考库。了解产品类型，核查关键问题，整理更清晰的中英文询价清单。",
+      "heroCardTitle": "选对管件，从问对问题开始。",
+      "heroCardCopy": "材料、螺纹形式、工况及当地合规要求，比外观相似更重要。",
+      "topics": [
+        {
+          "title": "螺纹与连接方式",
+          "summary": "BSP、NPT、卡套、卡压和快插连接系统并非都能互换。"
+        },
+        {
+          "title": "材料选择",
+          "summary": "黄铜、铜、不锈钢及聚合物均须根据具体用途核查材料适用性。"
+        },
+        {
+          "title": "压力、温度与介质",
+          "summary": "工况及所需认可会影响阀门或管件是否适用。"
+        }
+      ],
+      "products": [
+        {
+          "name": "黄铜螺纹弯头",
+          "category": "管件",
+          "description": "用于螺纹管道组件中改变方向的连接件。",
+          "spec": "公称尺寸、内外螺纹、螺纹类型、材料牌号。",
+          "tags": [
+            "黄铜",
+            "弯头",
+            "螺纹"
+          ],
+          "caution": "核查 BSP/NPT 螺纹兼容性及适用的饮用水要求。"
+        },
+        {
+          "name": "卡套式直通接头",
+          "category": "管件",
+          "description": "常用于连接相容铜管或塑料管的机械式接头。",
+          "spec": "管外径、卡套结构、管材兼容性、额定压力。",
+          "tags": [
+            "卡套连接",
+            "直通接头"
+          ],
+          "caution": "安装程序及允许使用的管材因系统而异。"
+        },
+        {
+          "name": "球阀",
+          "category": "阀门",
+          "description": "流体输送系统中常用的四分之一转隔离阀。",
+          "spec": "通径、阀体与阀座材料、阀门额定参数、端部连接。",
+          "tags": [
+            "隔离",
+            "四分之一转"
+          ],
+          "caution": "阀门额定参数必须适合温度、压力及使用介质。"
+        },
+        {
+          "name": "止回阀",
+          "category": "阀门",
+          "description": "用于在相容系统中减少介质逆流的单向阀。",
+          "spec": "开启压力、安装方向、连接方式、材料、试验标准。",
+          "tags": [
+            "防逆流",
+            "流动"
+          ],
+          "caution": "不能代替法规要求的倒流防止装置。"
+        },
+        {
+          "name": "不锈钢三通",
+          "category": "管件",
+          "description": "管道安装中用于分支的三向连接件。",
+          "spec": "材料牌号、支管尺寸、管系列或壁厚、连接方式。",
+          "tags": [
+            "不锈钢",
+            "三通"
+          ],
+          "caution": "向制造商核实具体材料牌号及检测文件。"
+        },
+        {
+          "name": "减压阀",
+          "category": "阀门",
+          "description": "用于需要控制下游压力的调节阀。",
+          "spec": "入口压力范围、出口调压范围、流量能力、认证要求。",
+          "tags": [
+            "调压",
+            "减压阀 PRV"
+          ],
+          "caution": "选型和安装应由具备资质的专业人员核查。"
+        }
+      ],
+      "guides": [
+        {
+          "title": "BSP 与 NPT：需要核查什么",
+          "summary": "公称尺寸相似的螺纹管件，其牙型及密封方式可能不同。",
+          "checks": [
+            "在图纸中确认准确的螺纹标准及尺寸。",
+            "索取尺寸数据或量规检验信息，不能只看产品照片。",
+            "明确密封方式、流体类型及当地规范要求。"
+          ]
+        },
+        {
+          "title": "如何编写更清晰的询价单（RFQ）",
+          "summary": "规格不完整容易造成报价错误及代用成本增加。",
+          "checks": [
+            "列明数量、图纸及实际使用工况。",
+            "明确检测报告、材质证明及包装要求。",
+            "询问样品政策、交期、贸易条款及不包含的项目。"
+          ]
+        },
+        {
+          "title": "核查阀门报价",
+          "summary": "只有技术条件一致，价格比较才有意义。",
+          "checks": [
+            "核实材料牌号及检测文件的真实性。",
+            "比较压力与温度适用范围及产品标准。",
+            "明确检验范围、备件及质保条款。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "本站销售管件吗？",
+          "answer": "不销售。本站是学习参考原型，不提供结算或实时供应商报价服务。"
+        },
+        {
+          "question": "外观相似的管件可以使用相同螺纹吗？",
+          "answer": "不一定。螺纹几何参数和适用密封方式可能不同，应依据标准及图纸确认，不能仅凭外观判断。"
+        },
+        {
+          "question": "制造商是否经过验证？",
+          "answer": "目前尚未发布制造商资料。未来收录时，将区分公开记录、供应商声明及经过独立审核的文件。"
+        }
+      ],
+      "disclosure": "技术说明仅用于一般知识学习，不代表工程批准、采购建议或产品合规证明。"
+    }
+  },
+  "heroImage": "./images/ball-valve.svg",
+  "catalogTranslations": {
+    "A clearer starting point for procurement.": "让采购调研有一个清晰起点。",
+    "Product types, not supplier offers": "产品类型参考，并非供应商报价",
+    "Original illustration · Not a product photo": "原创示意图 · 非实物照片",
+    "03 detailed references": "3 个详细产品参考",
+    "EN / 中文 content": "中英文内容",
+    "No account required": "无需注册账户",
+    "From product research to a better specification.": "从产品调研，走向更清晰的规格要求。",
+    "Prepare your RFQ →": "整理询价清单 →",
+    "Read product reference": "查看详细参考",
+    "Product reference": "产品参考"
+  }
+}
