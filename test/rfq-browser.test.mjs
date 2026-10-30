@@ -16,7 +16,7 @@ test('RFQ builder bilingual local-only flows across mobile and desktop',async t=
         try{
           await page.goto(site+'?lang=zh',{waitUntil:'load'});
           assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
-          await page.locator('a[href="#rfq-builder"]').click();
+          await page.locator('.hero .actions a[href="#rfq-builder"]').click();
           assert.equal(new URL(page.url()).hash,'#rfq-builder');
           await page.selectOption('#rfq-product','elbow');
           await page.fill('#rfq-size','DN20');
